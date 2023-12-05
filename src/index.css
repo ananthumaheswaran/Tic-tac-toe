@@ -6,7 +6,7 @@ body {
 }
 
 .game-main {
-  @apply flex items-center justify-center flex-col w-screen px-8 py-5;
+  @apply flex items-center flex-col w-screen px-8 py-5;
 }
 .board-row {
   @apply flex items-center md:border-white md:border-r-2 md:border-solid sm:border-none sm:pr-3 md:pr-5;

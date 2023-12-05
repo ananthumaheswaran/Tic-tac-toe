@@ -6,7 +6,7 @@ body {
 }
 
 .game-main {
-  @apply flex items-center justify-center flex-col w-screen;
+  @apply flex items-center justify-center flex-col w-screen px-8 py-5;
 }
 .board-row {
   @apply flex items-center md:border-white md:border-r-2 md:border-solid sm:border-none sm:pr-3 md:pr-5;
@@ -22,7 +22,7 @@ body {
   @apply border-t-2 border-white pt-6 w-full;
 }
 .move-btn {
-  @apply bg-neutral-100 w-full rounded-md font-light p-2 m-1 dark:bg-slate-800;
+  @apply bg-neutral-100 w-full rounded-md font-light p-2 mb-1 dark:bg-slate-800;
 }
 
 .game-header {
@@ -34,7 +34,7 @@ body {
 }
 
 .game-info-title {
-  @apply text-lg font-medium mx-2 text-white;
+  @apply text-lg font-medium  text-white;
 }
 .status {
   @apply text-center text-4xl font-bold py-8 text-white;

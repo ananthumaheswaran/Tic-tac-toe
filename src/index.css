@@ -6,14 +6,14 @@ body {
 }
 
 .board-row {
-  @apply flex items-center pr-5 border-gray-500 border-r-2;
+  @apply flex items-center  md:border-gray-500 md:border-r-2 md:border-solid sm:border-none sm:pr-3 md:pr-5;
 }
 .square {
-  @apply w-40 h-40 m-1 bg-white  dark:bg-slate-800 rounded-sm text-5xl  font-bold;
+  @apply w-28 h-28 text-3xl m-1 bg-white  dark:bg-slate-800 rounded-sm   font-bold sm:w-28 sm:h-28 sm:text-3xl md:w-36 md:h-36 md:text-4xl lg:w-40 lg:h-40 lg:text-5xl;
 }
 
 .game {
-  @apply flex items-start;
+  @apply flex items-start flex-col md:flex-row;
 }
 
 .move-btn {

@@ -22,12 +22,13 @@ function Board({ xIsNext, squares, onPlay }) {
 
   const winner = calculateWinner(squares);
   let status;
-  if (winner) status = "Winner: " + winner;
-  else status = "Next player: " + (xIsNext ? "X" : "O");
+  if (winner) status = "WINNER : " + winner;
+  else if (squares.every((square) => square)) {
+    status = "No one wins - It's a draw!";
+  } else status = "Next player: " + (xIsNext ? "X" : "O");
 
   return (
     <>
-      <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -43,6 +44,7 @@ function Board({ xIsNext, squares, onPlay }) {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
+      <div className="status">{status}</div>
     </>
   );
 }
@@ -66,25 +68,37 @@ export default function Game() {
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
-      description = "Go to move # 0" + move;
+      description = "Go to move 0" + move;
     } else {
       description = "Go to game start";
     }
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button className="move-btn" onClick={() => jumpTo(move)}>
+          {description}
+        </button>
       </li>
     );
   });
   return (
-    <div className="game">
-      <div className="game-board">
-        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+    <>
+      <header className="game-header">
+        <h1 className="game-title">Tic Tac Toe</h1>
+      </header>
+      <div className="game">
+        <div className="game-board">
+          <Board
+            xIsNext={xIsNext}
+            squares={currentSquares}
+            onPlay={handlePlay}
+          />
+        </div>
+        <div className="game-info">
+          <h2 className="game-info-title">Game History</h2>
+          <ul>{moves}</ul>
+        </div>
       </div>
-      <div className="game-info">
-        <ul>{moves}</ul>
-      </div>
-    </div>
+    </>
   );
 }
 

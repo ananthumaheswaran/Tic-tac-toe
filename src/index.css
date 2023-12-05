@@ -2,35 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  @apply m-0 p-0 font-sans flex items-center justify-center min-w-[320px] min-h-[100vh] text-black dark:text-white;
+  @apply m-0  font-sans flex  min-w-[320px] min-h-[100vh] text-black dark:text-white;
 }
 
+.game-main {
+  @apply flex items-center justify-center flex-col w-screen;
+}
 .board-row {
-  @apply flex items-center  md:border-gray-500 md:border-r-2 md:border-solid sm:border-none sm:pr-3 md:pr-5;
+  @apply flex items-center md:border-white md:border-r-2 md:border-solid sm:border-none sm:pr-3 md:pr-5;
 }
 .square {
-  @apply w-28 h-28 text-3xl m-1 bg-white  dark:bg-slate-800 rounded-sm   font-bold sm:w-28 sm:h-28 sm:text-3xl md:w-36 md:h-36 md:text-4xl lg:w-40 lg:h-40 lg:text-5xl;
+  @apply w-28 h-28 text-3xl m-1 bg-neutral-100 dark:bg-slate-800 rounded-sm font-bold sm:w-28 sm:h-28 sm:text-3xl md:w-36 md:h-36 md:text-4xl lg:w-40 lg:h-40 lg:text-5xl;
 }
 
 .game {
   @apply flex items-start flex-col md:flex-row;
 }
-
+.game-board {
+  @apply border-t-2 border-white pt-6 w-full;
+}
 .move-btn {
-  @apply bg-white w-full rounded-md font-light p-2 m-1 dark:bg-slate-800;
+  @apply bg-neutral-100 w-full rounded-md font-light p-2 m-1 dark:bg-slate-800;
 }
 
 .game-header {
-  @apply flex items-center pb-10 justify-center text-5xl font-bold  border-b-4 border-gray-500 mb-10;
+  @apply flex items-center justify-center text-4xl pt-10 pb-3  font-bold w-full sm:text-4xl sm:pb-3 md:text-5xl md:pt-20 md:pb-6 text-white;
 }
 
 .game-info {
-  @apply pl-5;
+  @apply w-full md:pl-5 md:border-t-2 md:border-white md:pt-6;
 }
 
 .game-info-title {
-  @apply text-lg font-semibold  mx-2;
+  @apply text-lg font-medium mx-2 text-white;
 }
 .status {
-  @apply text-center text-4xl font-bold py-8;
+  @apply text-center text-4xl font-bold py-8 text-white;
 }

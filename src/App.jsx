@@ -24,7 +24,7 @@ function Board({ xIsNext, squares, onPlay }) {
   let status;
   if (winner) status = "WINNER : " + winner;
   else if (squares.every((square) => square)) {
-    status = "No one wins - It's a draw!";
+    status = "It's a draw!";
   } else status = "Next player: " + (xIsNext ? "X" : "O");
 
   return (
@@ -81,7 +81,7 @@ export default function Game() {
     );
   });
   return (
-    <>
+    <div className="game-main">
       <header className="game-header">
         <h1 className="game-title">Tic Tac Toe</h1>
       </header>
@@ -98,7 +98,7 @@ export default function Game() {
           <ul>{moves}</ul>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

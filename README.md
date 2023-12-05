@@ -11,7 +11,7 @@ Make sure you have Node.js and npm installed.
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/react-tic-tac-toe.git
+git clone https://github.com/ananthumaheswaran/Tic-tac-toe.git
 cd react-tic-tac-toe
 npm install
 ```

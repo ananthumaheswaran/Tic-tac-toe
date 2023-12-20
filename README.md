@@ -1,4 +1,4 @@
-# Tic Tac Toe <a href="https://ananthumaheswaran.github.io/Tic-tac-toe/">Live</a>
+# Tic Tac Toe ## <a href="https://ananthumaheswaran.github.io/Tic-tac-toe/">Live</a>
 
 Simple Tic Tac Toe game built with React based on the official tutorial.
 

@@ -32,4 +32,4 @@ Open http://localhost:3000 to play.
 ### Project Structure
 
 - src/ contains React source code.
-- index.js: Entry point.
+- main.jsx: Entry point.

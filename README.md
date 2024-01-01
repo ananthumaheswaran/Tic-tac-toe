@@ -12,7 +12,7 @@ Make sure you have Node.js and npm installed.
 
 ```bash
 git clone https://github.com/ananthumaheswaran/Tic-tac-toe.git
-cd react-tic-tac-toe
+cd Tic-tac-toe
 npm install
 ```
 
